@@ -150,5 +150,29 @@
             "apk add --no-cache bind-tools build-base ca-certificates",
             "go install -v github.com/sa7mon/s3scanner@latest"
         ]
-    }    
+    },
+    "github-endpoints": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/gwen001/github-endpoints@latest"
+        ]
+    },
+    "github-subdomains": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/gwen001/github-subdomains@latest"
+        ]
+    },
+    "gitlab-subdomains": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/gwen001/gitlab-subdomains@latest"
+        ]
+    }
 }
