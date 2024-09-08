@@ -4,7 +4,7 @@ Base tools :
 
 ### Subdomains
 
-- Passive (amass, subfinder and github-subdomains)
+- Passive (amass, subfinder and github-subdomains and gitlab-subdomains)
 - Certificate transparency (crt)
 - NOERROR subdomain discovery (dnsx)
 - Bruteforce (puredns with massdns)
@@ -37,10 +37,12 @@ Base tools :
 - dnstake
 - nuclei (optimized: projectdiscovery/nuclei:latest 285.49 MB)
 - cloud_enum
-- s3Scanner (optimized ghcr.io/sa7mon/s3scanner:v3.0.4 43 Mb) 
+- s3Scanner (optimized ghcr.io/sa7mon/s3scanner:v3.0.4 43 Mb)
+- github-subdomains
+- gitlab-subdomains
 
 
 WIP 
-export IMAGE=amass && ./apply-template.sh && docker build --no-cache Docker/$IMAGE/. -t $IMAGE \
+export IMAGE=github-endpoints && ./apply-template.sh && docker build --no-cache Docker/$IMAGE/. -t $IMAGE \
     && docker run -it --rm $IMAGE /bin/sh
 
