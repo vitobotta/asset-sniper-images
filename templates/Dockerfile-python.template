@@ -1,0 +1,10 @@
+FROM python:3.12-alpine
+
+ENV PYTHONUNBUFFERED=1
+ENV LC_ALL=C.UTF-8
+ENV PATH="/root/.local/bin:$PATH"
+
+# Install
+RUN  {{ env.install }}
+
+CMD ["sh"]

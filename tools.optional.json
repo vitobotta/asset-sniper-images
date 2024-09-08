@@ -1,0 +1,640 @@
+{
+    "amass": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/owasp-amass/amass/v3/...@master"
+        ]
+    },
+    "analyticsrelationships": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/Josue87/analyticsrelationships@latest"
+        ]
+    },
+    "anew": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/tomnomnom/anew@latest"
+        ]
+    },
+    "brutespray": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/x90skysn3k/brutespray@latest",
+            "git clone --filter=\"blob:none\" https://github.com/x90skysn3k/brutespray",
+            "cd brutespray",
+            "git pull"
+        ]
+    },
+    "byp4xx": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/lobuhi/byp4xx@latest",
+            "git clone --filter=\"blob:none\" https://github.com/lobuhi/byp4xx",
+            "cd byp4xx",
+            "git pull"
+        ]
+    },
+    "cdncheck": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/cdncheck/cmd/cdncheck@latest"
+        ]
+    },
+    "crlfuzz": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest"
+        ]
+    },
+    "crt": {
+        "type": "go",
+        "install": [
+            "go install github.com/cemulus/crt@latest"
+        ]
+    },
+    "dalfox": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/hahwul/dalfox/v2@latest"
+        ]
+    },
+    "dnstake": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/pwnesia/dnstake/cmd/dnstake@latest"
+        ]
+    },
+    "dnsx": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest"
+        ]
+    },
+    "dsieve": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/trickest/dsieve@master"
+        ]
+    },
+    "enumerepo": {
+        "type": "go",
+        "install": [
+            "go install github.com/trickest/enumerepo@latest"
+        ]
+    },
+    "ffuf": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/ffuf/ffuf/v2@latest"
+        ]
+    },
+    "gau": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/lc/gau/v2/cmd/gau@latest"
+        ]
+    },
+    "gf": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/tomnomnom/gf@latest",
+            "git clone --filter=\"blob:none\" https://github.com/tomnomnom/gf",
+            "cd gf",
+            "cp -r examples ~/.gf"
+        ]
+    },
+    "gitdorks_go": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/damit5/gitdorks_go@latest",
+            "git clone --filter=\"blob:none\" https://github.com/damit5/gitdorks_go",
+            "cd gitdorks_go",
+            "git pull"
+        ]
+    },
+    "github-endpoints": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/gwen001/github-endpoints@latest"
+        ]
+    },
+    "github-subdomains": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/gwen001/github-subdomains@latest"
+        ]
+    },
+    "gitlab-subdomains": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/gwen001/gitlab-subdomains@latest"
+        ]
+    },
+    "gotator": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/Josue87/gotator@latest"
+        ]
+    },
+    "Gxss": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/KathanP19/Gxss@latest"
+        ]
+    },
+    "hakip2host": {
+        "type": "go",
+        "install": [
+            "go install github.com/hakluke/hakip2host@latest"
+        ]
+    },
+    "httpx": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest"
+        ]
+    },
+    "inscope": {
+        "type": "go",
+        "install": [
+            "go install github.com/tomnomnom/hacks/inscope@latest"
+        ]
+    },
+    "interactsh-client": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest"
+        ]
+    },
+    "katana": {
+        "type": "go",
+        "install": [
+            "go install github.com/projectdiscovery/katana/cmd/katana@latest"
+        ]
+    },
+    "mapcidr": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest"
+        ]
+    },
+    "mantra": {
+        "type": "go",
+        "install": [
+            "go install github.com/MrEmpy/mantra@latest"
+        ]
+    },
+    "notify": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/notify/cmd/notify@latest"
+        ]
+    },
+    "nmapurls": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/sdcampbell/nmapurls@latest"
+        ]
+    },
+    "nuclei": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest"
+        ]
+    },
+    "ppmap": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/kleiton0x00/ppmap@latest"
+        ]
+    },
+    "puredns": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/d3mondev/puredns/v2@latest"
+        ]
+    },
+    "qsreplace": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/tomnomnom/qsreplace@latest"
+        ]
+    },
+    "roboxtractor": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/Josue87/roboxtractor@latest"
+        ]
+    },
+    "s3scanner": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/sa7mon/s3scanner@latest"
+        ]
+    },
+    "shortscan": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/bitquark/shortscan/cmd/shortscan@latest"
+        ]
+    },
+    "smap": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/s0md3v/smap/cmd/smap@latest"
+        ]
+    },
+    "sns": {
+        "type": "go",
+        "install": [
+            "go install github.com/sw33tLie/sns@latest"
+        ]
+    },
+    "subfinder": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest"
+        ]
+    },
+    "subjs": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/lc/subjs@latest"
+        ]
+    },
+    "tlsx": {
+        "type": "go",
+        "install": [
+            "go install github.com/projectdiscovery/tlsx/cmd/tlsx@latest"
+        ]
+    },
+    "unfurl": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/tomnomnom/unfurl@latest"
+        ]
+    },
+    "Web-Cache-Vulnerability-Scanner": {
+        "type": "go",
+        "install": [
+            "go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest",
+            "git clone --filter=\"blob:none\" https://github.com/Hackmanit/Web-Cache-Vulnerability-Scanner",
+            "cd Web-Cache-Vulnerability-Scanner",
+            "git pull"
+        ]
+    },
+    "cloud_enum": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/initstring/cloud_enum",
+            "cd cloud_enum",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "CMSeeK": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/Tuhinshubhra/CMSeeK",
+            "cd CMSeeK",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "commix": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/commixproject/commix",
+            "cd commix",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "Corsy": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/s0md3v/Corsy",
+            "cd Corsy",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "ctfr": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/UnaPibaGeek/ctfr",
+            "cd ctfr",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "dnsvalidator": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/vortexau/dnsvalidator",
+            "cd dnsvalidator",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "dontgo403": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/devploit/dontgo403",
+            "cd dontgo403",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "dorks_hunter": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/six2dez/dorks_hunter",
+            "cd dorks_hunter",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "fav-up": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/pielco11/fav-up",
+            "cd pielco11up",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "ffufPostprocessing": {
+        "type": "go",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/Damian89/ffufPostprocessing",
+            "cd ffufPostprocessing",
+            "go build -o ffufPostprocessing main.go",
+            "chmod +x ./ffufPostprocessing",
+            "cp ./ffufPostprocessing /usr/local/bin"
+        ]
+    },
+    "Gf-Patterns": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/1ndianl33t/Gf-Patterns",
+            "cd Gf-Patterns",
+            "mv ./*.json ~/.gf"
+        ]
+    },
+
+    "ghauri": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/r0oth3x49/ghauri",
+            "cd ghauri",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+
+    "gitleaks": {
+        "type": "go",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/gitleaks/gitleaks",
+            "cd gitleaks",
+            "make build",
+            "cp ./gitleaks /usr/local/bin/"
+        ]
+    },
+    "Infoga": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/m4ll0k/Infoga",
+            "cd Infoga",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "interlace": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/codingo/Interlace",
+            "cd Interlace",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "JSA": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/w9w/JSA",
+            "JSA",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "LeakSearch": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/JoelGMSec/LeakSearch",
+            "cd LeakSearch",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "massdns": {
+        "type": "python",
+        "install": [
+            "apk --no-cache --virtual .build-deps add git build-base",
+            "git clone --filter=\"blob:none\" https://github.com/blechschmidt/massdns",
+            "cd massdns",
+            "make",
+            "apk del .build-deps",
+            "cp bin/massdns /usr/local/bin/"
+        ]
+    },
+    "misconfig-mapper": {
+        "type": "go",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/intigriti/misconfig-mapper",
+            "cd intigriti/mapper",
+            "go build -o misconfig-mapper",
+            "chmod +x ./misconfig-mapper",
+            "cp ./misconfig-mapper /usr/local/bin"
+        ]
+    },
+    "nomore403": {
+        "type": "go",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/devploit/nomore403",
+            "cd nomore403",
+            "go get",
+            "go build",
+            "chmod +x ./nomore403",
+            "cp ./nomore403 /usr/local/bin/"
+        ]
+    },
+    "Oralyzer": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/r0075h3ll/Oralyzer",
+            "cd Oralyzer",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "pwndb": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/davidtavarez/pwndb",
+            "cd pwndb",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "pydictor": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/LandGrey/pydictor",
+            "cd pydictor",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "regulator": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/cramppet/regulator",
+            "cd regulator",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "smuggler": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/defparam/smuggler",
+            "cd smuggler",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "SwaggerSpy": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/UndeadSec/SwaggerSpy",
+            "cd SwaggerSpy",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "testssl": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/drwetter/testssl.sh",
+            "cd drwetter/sh",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "trufflehog": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/trufflesecurity/trufflehog",
+            "cd trufflehog",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "ultimate-nmap-parser": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/shifty0g/ultimate-nmap-parser",
+            "cd shifty0g/ultimate-parser",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "urless": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/xnl-h4ck3r/urless",
+            "cd xnl-urless",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "wafw00f": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/EnableSecurity/wafw00f",
+            "cd wafw00f",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "waymore": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/xnl-h4ck3r/waymore",
+            "cd xnl-waymore",
+            "git pull",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    }
+
+}

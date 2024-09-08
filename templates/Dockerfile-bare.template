@@ -1,0 +1,10 @@
+#FROM buildpack-deps:scm
+FROM alpine:3.20
+
+ENV PATH="/root/.local/bin:$PATH"
+WORKDIR /
+
+# Install
+RUN  {{ env.install }}
+
+CMD ["sh"]

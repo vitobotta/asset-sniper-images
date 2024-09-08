@@ -1,0 +1,154 @@
+{
+    "amassv3": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/owasp-amass/amass/v3/...@master"
+        ]
+    },
+    "amass": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/owasp-amass/amass/v4/...@master"
+        ]
+    },
+    "analyticsrelationships": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/Josue87/analyticsrelationships@latest"
+        ]
+    },
+    "crt": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install github.com/cemulus/crt@latest"
+        ]
+    },
+    "dnsx": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest"
+        ]
+    },
+    "puredns": {
+        "type": "go",
+        "install": [
+            "apk --no-cache --virtual .build-deps add git build-base",
+            "git clone --filter=\"blob:none\" https://github.com/blechschmidt/massdns",
+            "cd massdns",
+            "make",
+            "apk del .build-deps",
+            "cp bin/massdns /usr/local/bin/",
+            "go install -v github.com/d3mondev/puredns/v2@latest"
+        ]
+    },
+    "gotator": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/Josue87/gotator@latest"
+        ]
+    },
+    "ripgen": {
+        "type": "bare",
+        "install": [
+            "apk add rustup build-base",
+            "rustup-init -y",
+            ". /root/.cargo/env",
+            "cargo install ripgen",
+            "export PATH=/root/.cargo/bin:$PATH"
+        ]
+    },
+    "regulator": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/cramppet/regulator",
+            "cd regulator",
+            "pip3 install -r requirements.txt || true"
+        ]
+    },
+    "katana": {
+        "type": "go",
+        "install": [
+            "apk -U upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates chromium",
+            "go install github.com/projectdiscovery/katana/cmd/katana@latest"
+        ]
+    },
+    "subfinder": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest"
+        ]
+    },
+    "tlsx": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/projectdiscovery/tlsx/cmd/tlsx@latest"
+        ]
+    },
+    "dsieve": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache ",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/trickest/dsieve@master"
+        ]
+    },
+    "dig": {
+        "type": "bare",
+        "install": [
+            "apk upgrade --no-cache",
+            "apk add bind-tools"
+        ]
+    },
+    "dnstake": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/pwnesia/dnstake/cmd/dnstake@latest"
+        ]
+    },
+    "nuclei": {
+        "type": "go",
+        "install": [
+            "apk -U upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates chromium",
+            "go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest"
+        ]
+    },
+    "cloud_enum": {
+        "type": "python",
+        "install": [
+            "apk add git",
+            "git clone --filter=\"blob:none\" https://github.com/initstring/cloud_enum",
+            "cd cloud_enum",
+            "pip3 install -r requirements.txt || true",
+            "pip3 install . || true"
+        ]
+    },
+    "s3scanner": {
+        "type": "go",
+        "install": [
+            "apk upgrade --no-cache",
+            "apk add --no-cache bind-tools build-base ca-certificates",
+            "go install -v github.com/sa7mon/s3scanner@latest"
+        ]
+    }    
+}

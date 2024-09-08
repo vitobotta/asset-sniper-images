@@ -1,0 +1,9 @@
+FROM golang:1.23-alpine
+
+ENV PATH="/root/go/bin:$PATH"
+ENV CGO_ENABLED=1
+
+# Install
+RUN  {{ env.install }}
+
+CMD ["sh"]
