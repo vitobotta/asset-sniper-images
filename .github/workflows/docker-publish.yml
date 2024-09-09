@@ -6,8 +6,7 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '20 8 * * *'
+  workflow_dispatch:
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
@@ -23,10 +22,14 @@ env:
 
 
 jobs:
-  prepare:
+  build:
     runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.list-files.outputs.tools }}
+    permissions:
+      contents: read
+      packages: write
+      # This is used to complete the identity challenge
+      # with sigstore/fulcio when running outside of PRs.
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -41,43 +44,28 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: List all changed files
-        id: list-files
-        run: |
-          echo "tools=$(ls -A Docker/)" >> ${GITHUB_OUTPUT}
-      
-      - name: Show tools
-        run: |
-          echo ${{ steps.list-files.outputs.tools }}
-
-  build:
-  
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-      # This is used to complete the identity challenge
-      # with sigstore/fulcio when running outside of PRs.
-      id-token: write
-
-    steps:
-
       - name: Building & Pushing Docker Image
         run: |
-          cd Docker/$TAG_NAME || exit
-          docker build . --tag assetsniper/${TAG_NAME}:latest
-          docker push assetsniper/${TAG_NAME}:latest
+          echo cwd
+          echo pwd
           
-      # Build and push Docker image with Buildx (don't push on PR)
-      # https://github.com/docker/build-push-action
-      - name: Build and push Docker image
-        id: build-and-push
-        uses: docker/build-push-action@0565240e2d4ab88bba5387d719585280857ece09 # v5.0.0
-        with:
-          context: Docker/$TAG_NAME
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: $TAG_NAME
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+      - name: Building & Pushing Docker Image
+        run: |
+          for tools in $(ls -A Docker/);
+          do
+              folder="Docker/"${tools}
+              IMAGE_NAME=${tools}
+          
+              tmpName="image-$RANDOM"
+              docker build $folder --file $folder/Dockerfile --tag $tmpName
+              IMAGE_ID=${{ env.REGISTRY }}"/"${{ github.repository }}"/"$IMAGE_NAME
+              VERSION="latest"
+          
+              echo IMAGE_ID=$IMAGE_ID
+              echo VERSION=$VERSION
+          
+              docker tag $tmpName $IMAGE_ID:$VERSION
+              docker push $IMAGE_ID:$VERSION
+          done;          
+
 
